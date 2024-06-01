@@ -1,0 +1,983 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 1s linear;
+    list-style: none;
+   
+}
+a{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+body{
+    align-items: center;
+}
+header{
+    position: fixed;/* cuon trang nhung van dung yen*/
+    display: flex;/* cho tat ca nam hang ngang*/
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f7f5f5;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000px;
+    box-shadow: 0 .5rem 1rem rgb(66, 47, 47);
+    border-radius: 4px;
+}
+ .logo{
+    font-size: 20px;
+    color: #333;
+    font-weight: bolder;
+    color: rgb(243, 75, 131);
+}
+header .icons a{
+    padding-left: 2rem;
+    font-size: 2rem;
+    color: palevioletred;
+}
+header .icons a:hover{
+    color:blue;
+}
+
+#search {
+    padding-left: 10px;
+}
+
+.box-menu{
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    display:flex ;
+    justify-content:center ;
+    align-items: center;
+    margin: auto;
+}
+
+.box-menu a:hover {
+    
+    color: pink;
+
+}
+.section {
+    padding: 2rem 9%;
+    
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #555;
+    border-radius: 5rem;
+    padding: 5rem 1.5rem;
+    cursor: pointer;
+    border: 1 solid #555;
+    display: none;
+}
+
+
+/*trangchu*/
+.trangchus{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    background-size: cover;
+  
+}
+.trangchus .trangchu h3{
+font-size: 40px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: rgb(97, 20, 97);
+}
+.trangchus .trangchu span{
+    font-size: 30px;
+    color: rgb(126, 123, 124);
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-style: oblique;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background: #302e2e;
+    color: rgb(234, 227, 229);
+    font-size: 2rem;
+    padding: 1rem 3%; /* chinh noi dung trong*/
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(218, 112, 130);
+}
+.carousel {
+    overflow: hidden; /* Để ẩn phần nằm ngoài khu vực carousel */
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease;/* Hiệu ứng chuyển động */
+}
+.slides img {
+    width: 100%;
+}
+/* noibat*/
+.heading {
+    font-size: 4rem;
+    color: #cd326b;
+    background: #cdc5c5;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;/* chinh noi dung ngoai*/
+    margin-top: 3rem;
+}
+.heading span{
+    font-size: 2rem;
+    color: #241717;
+}
+.box_noibat{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.box_noibat .boxs{
+   
+    flex:1rem;
+    box-shadow: 0.5rem 0,5rem rgb(126, 123, 124);
+    border-radius: 50%;
+    border: 1rem solid rgb(126, 123, 124);
+}
+.box_noibat .boxs .box_contaiers{
+     z-index: 1;
+    font-size: 2rem;
+    background: #eb2222;
+        color: rgb(19, 4, 9);
+
+}
+.box_noibat .boxs  .images{
+     text-align: center;
+    overflow: hidden;
+}
+.box_noibat .boxs  .images img{
+    height: 15rem;
+}
+.box_noibat .boxs:hover{
+    transform: scale(1.2);
+}
+.boxs h3{
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    background: rgb(228, 133, 133);
+    color: #120409;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+}
+
+
+/*lua chon chung toi*/
+.icon_conta{
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+}
+.icon_contas{
+    background: #fff;
+    padding: 2rem;
+    align-items:center
+}
+.icon_contas h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.icon_contas p{
+    font-style: oblique;
+    color: #bf3232;
+}
+/* hoa hong,lan ho diep, hoa chuc mung, mix nhieu hoa*/
+.box_hoa{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.box_hoa .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem 1,5rem rgb(126, 123, 124);
+    border-radius: 5rem;
+    border: 1rem solid rgb(126, 123, 124);
+   
+}
+.box_hoa .box .box_contaier{
+    font-size: 2rem;
+    background: #333;
+        color: rgb(207, 38, 94);
+        z-index: 1;
+        border-radius: 5rem;
+}
+.box_hoa .box .image{
+    text-align: center;
+    overflow: hidden;
+}
+.box_hoa .box .image img{
+height: 20rem;
+}
+.box_hoa .box:hover .image img{
+    transform: scale(1.2);
+    
+}
+.box_hoa .box .image .icons{
+    position:relative ;
+    bottom: -7;left: 0;right: 0;
+    display: flex;
+}
+.box_hoa .box:hover .image .icons{
+    border: 0;
+}
+.box_hoa .box .image .icons a{
+    height: 4rem;
+    line-height: 2rem;
+    font-size: 2rem;
+    width: 50%;
+    background: #cd326b;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+   
+}
+.box_hoa .box .image .icons .cart-btn{
+border-left: 1rem rgb(16, 11, 13);
+border-right: 1rem rgb(126, 123, 124);
+width: 100%;
+
+}
+.box_hoa .box .image .icons a:hover{
+    background: #241717;
+}
+.box_hoa .box .box_contaiers{
+    padding: 2rem;
+    text-align: center;
+}
+.box_hoa .box .box_contaiers h3{
+   font-size: 2.5rem;
+   color: #0e0307;
+}
+.box_hoa .box .box_contaiers .gia{
+    font-size: 2rem;
+    color: #cd326b;
+    font-weight: bolder;
+    padding-top: 1rem;
+
+}
+.box_hoa .box .box_contaiers .gia span{
+    font-size: 1.5rem;
+    color: #888585;
+    font-weight: lighter;
+    text-decoration: line-through;
+   
+}
+
+/* danh gia*/
+.review .box_review{
+    display: flex;
+    text-align: center;
+}
+.review .box_review .box{
+    padding-top: 2rem;
+    text-align: left;
+}
+ .stars{
+    color: rgb(213, 213, 17);
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+.nguoi img{
+    border-radius: 50%;}
+
+    /* lien he*/
+    
+    .box-contact {
+        padding: 20px;
+        background-image: url("/img/LIENHE.jpg");
+        background-size: 50%;
+    }
+    .box-contact {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    .congty {
+        color: blue;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        font-size: 15px;
+        flex: 1;
+        
+
+    }
+    .khachhang {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .khachhang h2 {
+        margin-top: 0;
+        color: blue;
+    }
+    
+    
+    
+    .khachhang .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .khachhang .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        background: transparent;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        backdrop-filter: blur(15px);
+    }
+    
+    .khachhang .btn{
+        background: transparent;
+        backdrop-filter: blur(15px);
+        color: blue;
+    }
+    .khachhang .btn:hover{
+        background-color: #1ce934;
+        
+    }
+    .input-field{
+        position: relative;
+       }
+       .input-field input[type="email"], 
+       .input-field input[type="text"],
+       .input-field input[type="number"]
+       
+        {
+               border-radius: 10px;
+               background: transparent;
+               margin: 15px;
+               border: 2px solid rgb(61, 199, 43);
+               width: 280px;
+               height: 2px; 
+               padding: 20px 40px 20px 20px;
+               backdrop-filter: blur(15px);
+       }
+    
+    
+/* footer*/
+
+.footer .footer-box{
+   
+    background-image: url("/img/footer.jpg");
+    background-size: 100%;
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+    clear: both;
+    background-repeat: repeat;
+    background-position: left top;
+    padding: 20px 0px 0px 0px;
+    margin-top: 20px;
+    font-size: 14px
+}
+.footer .footer-box .box_noidung{
+    display: flex;
+    justify-content: space-between;/* cách khoảng cách đều nhau*/
+   padding: 2rem;
+  margin: 10px;
+}
+.footer .footer-box .box_noidung .shop-hoa{
+    line-height: 2rem;/* khoảng cách từng hàng*/
+}
+.footer .footer-box .box_noidung .shop-hoa h1{
+    color: red;
+    font-style: oblique;
+}
+.footer .footer-box .box_noidung .shop-hoa p{
+    color: #891919;
+}
+.footer .footer-box .thongtin{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.footer .footer-box .thongtin .button{
+    font-size: 4rem;
+}
+.footer .footer-box .thongtin .gioithieu{
+    line-height: 2rem;
+}
+.footer .footer-box .thongtin .gioithieu h1{
+    color: red;
+    font-style: oblique;
+}
+/*san pham*/
+.sanpham {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.sanphams {
+    margin-top: 15rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.sanpham h3{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: red;
+}
+
+.sanphams img {
+    width: 250px; /* Điều chỉnh kích thước của ảnh */
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sanpham-box {
+    flex: 1;
+}
+
+.gia {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ed0b13;
+    margin-bottom: 10px;
+}
+
+.gia span {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.box_contaiers ul {
+    padding: 0;
+    margin: 10px 0;
+    
+}
+
+.box_contaiers li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+.box_contaiers span{
+    font-style: oblique;
+}
+.luu-y{
+    
+    border: 1px solid #5f08eb;
+    border-radius: 8px;
+        padding: 10px 12px;
+        position: relative;
+        margin-top: 20px;
+        color: #288ad6;
+        font-size: 14px;
+    }
+
+.luu-y p {
+    padding: 5px;
+    font-size: 14px;
+    color: #3f0df3;
+}
+
+.giohang {
+    margin: 20px;
+    display: flex;
+    
+}
+.gio{
+    margin: 5px;
+    display: flex;
+   
+   
+}
+.mua{
+    margin: 5px;
+    display: flex;
+    
+    
+}
+
+.giohang a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.giohang a:hover {
+    background-color: #de6007;
+}
+/*media*/
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+header .fa-bars{
+    display: block;
+    
+}
+
+.box-menu{
+position: absolute;
+top:100%;  
+width: 300px;
+height: 70vh;
+background: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 120px 30px;
+transform:translateX(-100%);
+
+}
+.box-menu a{
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    background: #fff;
+}
+.open .box-menu{
+right: 0;
+}
+.trangchus {
+    padding-top: 50px; 
+    min-height: auto; 
+}
+
+.trangchus .trangchu h3 {
+    font-size: 30px; 
+}
+
+.trangchus .trangchu span {
+    font-size: 20px; 
+}
+
+.btn {
+    font-size: 1.5rem; 
+    padding: 0.5rem 2rem; 
+}
+
+/*noibat*/
+.heading { 
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
+    margin-top: 2rem; 
+}
+
+.heading span {
+    font-size: 1.5rem; 
+}
+
+.icon_conta {
+    padding-top: 3rem; 
+    padding-bottom: 3rem; 
+}
+
+.icon_contas {
+    padding: 1rem; 
+}
+
+.icon_contas h3 {
+    font-size: 1.5rem; 
+}
+
+.icon_contas p {
+    font-size: 1rem; 
+/*chon chung toi*/
+.icon_conta {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+}
+
+.icon_contas {
+    padding: 1rem; 
+}
+.icon_contas h3 {
+    font-size: 1.5rem;
+}
+
+.icon_contas p {
+    font-size: 0.75rem; 
+}
+
+/*hoa*/
+.box_hoa .box {
+    flex-basis: 100%; 
+    margin-bottom: 1.5rem; 
+}
+
+.box_hoa .box .box_contaiers {
+    font-size: 1.5rem; 
+}
+
+.box_hoa .box .image img {
+    height: 15rem; 
+}
+
+/**/
+.review .box_review {
+    display: block; 
+}
+
+.review .box_review .box {
+    padding-top: 1rem; 
+    text-align: center; 
+}
+
+.stars {
+    font-size: 1.5rem; 
+    padding-bottom: 1rem; 
+    text-align: center; 
+}
+
+.nguoi img {
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto; 
+}
+/* lienhej*/
+.box-contact {
+    background-size: 100%; 
+}
+
+.input-field input[type="email"],
+.input-field input[type="text"],
+.input-field input[type="number"] {
+    width: 100%; 
+    max-width: none; 
+    margin: 10px 0; 
+    padding: 15px; 
+}
+/**/
+.footer .footer-box {
+    padding: 1rem; 
+}
+
+.footer .footer-box .box_noidung {
+    flex-direction: column; /* Chuyển sang hiển thị các box nội dung theo chiều dọc */
+}
+
+.footer .footer-box .thongtin {
+    flex-direction: column; 
+    padding: 1rem; 
+}
+.footer .footer-box {
+    flex-direction: column; 
+        padding: 0.5rem; 
+    }
+    
+    .footer .footer-box .box_noidung {
+        flex-direction: column; 
+    }
+    
+    .footer .footer-box .thongtin {
+        flex-direction: column; 
+        padding: 0.5rem;
+}
+/**/
+.sanphams {
+    margin-top: 15rem; /* Khôi phục khoảng cách giữa phần header và các sản phẩm */
+    flex-direction: row; /* Chuyển trở lại hiển thị sản phẩm theo chiều ngang */
+    align-items: center; /* Canh sản phẩm vào giữa */
+}
+
+.sanphams img {
+    width: 250px; 
+    margin-right: 20px; 
+    margin-bottom: 0; 
+    border-radius: 8px; 
+}
+
+.sanpham h3 {
+    font-size: 2rem; 
+}
+
+.gia {
+    font-size: 18px; 
+}
+
+.giohang {
+    margin: 20px; 
+    justify-content: flex-end; 
+}
+
+.giohang a {
+    padding: 10px 20px; 
+}
+/*gioithieu*/
+.about {
+    margin-top: 200px;}
+.box-about {
+    flex-direction: column;
+}
+
+.gioithieu,
+img {
+    flex: 100%;
+}
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .trangchus {
+        padding-top: 100px; 
+        min-height: 100px; 
+    }
+
+    .trangchus .trangchu h3 {
+        font-size: 40px; 
+    }
+
+    .trangchus .trangchu span {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 2rem; 
+        padding: 1rem 3%; 
+    }
+    /* noibat*/
+    .heading {
+        font-size: 2rem; 
+        margin-bottom: 1.5rem; 
+        margin-top: 1.5rem; 
+    }
+
+    .heading span {
+        font-size: 1.25rem; 
+    }
+
+    .icon_conta {
+        padding-top: 2rem; 
+        padding-bottom: 2rem; 
+    }
+
+    .icon_contas {
+        padding: 0.5rem; 
+    }
+
+    .icon_contas h3 {
+        font-size: 1.25rem; 
+    }
+
+    .icon_contas p {
+        font-size: 0.75rem; 
+    }
+    /*haychonchungtoio*/
+    .icon_conta {
+        padding-top: 3rem; 
+        padding-bottom: 3rem; 
+    }
+
+    .icon_contas {
+        padding: 1rem; 
+    }
+
+    .icon_contas h3 {
+        font-size: 1.5rem; 
+    }
+
+    .icon_contas p {
+        font-size: 0.75rem; 
+    }
+}
+/*hoa*/
+.box_hoa .box {
+    flex-basis: 100%; 
+    margin-bottom: 1.5rem; 
+}
+
+.box_hoa .box .box_contaiers {
+    font-size: 1.5rem; 
+}
+
+.box_hoa .box .image img {
+    height: 15rem; 
+}
+/**/
+
+.review .box_review {
+    display: block; 
+}
+
+.review .box_review .box {
+    padding-top: 1rem; 
+    text-align: center; 
+}
+
+.stars {
+    font-size: 1.5rem; 
+    padding-bottom: 1rem; 
+    text-align: center; 
+}
+
+.nguoi img {
+    border-radius: 50%;
+    display: block; 
+    margin: 0 auto; 
+}
+/*lienhe*/
+.box-contact {
+    background-size: 100%; }
+
+.input-field input[type="email"],
+.input-field input[type="text"],
+.input-field input[type="number"] {
+    width: 100%;
+    max-width: none; 
+    margin: 10px 0; 
+    padding: 15px; 
+}
+/**/
+.footer .footer-box {
+        padding: 0.5rem; 
+    }
+    
+    .footer .footer-box .box_noidung {
+        flex-direction: column; 
+    }
+    
+    .footer .footer-box .thongtin {
+        flex-direction: column; 
+        padding: 0.5rem;
+}
+/*sanpham*/
+.sanphams {
+    margin-top: 10rem; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.sanphams img {
+    width: 100%; 
+    margin-right: 0; 
+    margin-bottom: 1rem; 
+    border-radius: 8px; 
+}
+
+.sanpham h3 {
+    font-size: 1.5rem;
+}
+
+.gia {
+    font-size: 14px; 
+}
+
+.giohang {
+    margin: 10px 0; 
+    justify-content: center; 
+}
+
+.giohang a {
+    padding: 8px 16px; 
+}
+/*gioithieu*/
+.about {
+    
+    margin-top: 50px;}
+.box-about {
+    flex-direction: column;
+}
+
+.gioithieu,
+img {
+    flex: 100%;
+}
+}
+
+
+
+
+
+/*giới thiệu*/
+.about {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-about {
+    display: flex;
+    width: 100%;
+}
+
+.gioithieu {
+    flex: 0 0 66.666667%; /* 2/3 */
+    padding-right: 20px;
+    
+}
+.gioithieu h3{
+    color: red;
+}
+
+.sanphams img {
+    
+   font-size: 1rem;
+    flex: 0 0 33.333333%; /* 1/3 */
+
+}
+
+
+
+
+
+
+
+
+
