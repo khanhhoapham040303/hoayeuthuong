@@ -47,38 +47,47 @@
     color: rgb(243, 75, 131);
   }
   
-  .navmenu {
+  header .icons a {
+    padding-left: 2rem;
+    font-size: 2rem;
+    color: palevioletred;
+  }
+  header .icons a:hover {
+    color: blue;
+  }
+  
+  #search {
+    padding-left: 10px;
+  }
+  
+  .box-menu {
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
     display: flex;
-    flex-wrap: wrap;
-
-}
-.navmenu a {
-    
-    color: #2c2c2c;
-    font-size: 10px;
-    text-transform: capitalize;
-    padding: 10px 20px;
-    font-weight: 400;
-    transition: all .42s ease;
-}
-.navmenu a:hover {
-    color:palevioletred;
-}
-.nav-icon {
-    display: flex;
+    justify-content: center;
     align-items: center;
-}
-.nav-icon i {
-    margin-right: 20px;
-    color: #2c2c2c;
-    font-size: 25px;
-    font-weight: 400;
-    transition: all .42s ease;
-}
-.nav-icon i:hover {
-    transform: scale(1.1);
-    color: rgb(234, 98, 204);
-}
+    margin: auto;
+  }
+  
+  .box-menu a:hover {
+    color: pink;
+  }
+  .section {
+    padding: 2rem 9%;
+  }
+  header #toggler {
+    display: none;
+  }
+  header .fa-bars {
+    font-size: 3rem;
+    color: #555;
+    border-radius: 5rem;
+    padding: 5rem 1.5rem;
+    cursor: pointer;
+    border: 1 solid #555;
+    display: none;
+  }
 /*trangchu*/
 section{
     padding: 5% 10%;
@@ -169,20 +178,22 @@ section{
   .box-hoahong{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(260px,auto));
-    gap:2rem
+    gap:2rem;
   }
   .box-hoahong .row{
     position: relative;
     transition: all 40s;
   }
+  /*
   .box-hoahong .row img{
     width:80%;
     height: 20rem;
     transition: all 40s;
   }
-   .row img:hover{
-    transform: scale(0.9);
-  }
+  .row:hover img {
+    transform: scale(0.7);
+}
+
   .box-hoahong .box_contaier {
     font-size: 2rem;
     background: #333;
@@ -214,7 +225,56 @@ section{
     font-weight: lighter;
     text-decoration: line-through;
   }
-  /**/
+  */
+  .row {
+    position: relative;
+    overflow: hidden;
+}
+
+.row img {
+    width: 50%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.row:hover img {
+    transform: scale(0.8);
+}
+
+.heart-icon {
+  font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.row:hover .heart-icon {
+    opacity: 1;
+}
+
+
+.box-hoahong .heart-icon:hover{
+  color: #bf3232;
+}
+.ratting i{
+  color: yellow;
+  font-size: 18px;
+}
+.gia {
+  font-size: 2rem;
+  color: #cd326b;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+.gia span {
+  font-size: 1.5rem;
+  color: #888585;
+  font-weight: lighter;
+  text-decoration: line-through;
+}
   
 
 /*danhgia*/
@@ -369,7 +429,7 @@ section{
     
 }
 /* trang sp*/
-/*san pham*/
+
 .sanpham {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -523,29 +583,114 @@ section{
     .height  span{
       font-size: 1rem;
     }
-  }
-  @media(max-width:750px){
-      .navmenu{
-          position: absolute;
-          top: 100%;
-          right: -100%;
-          width: 300px;
-          height: 130vh;
-          background: #edfff1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 120px 30px;
-          transition: all .42s;
+    .box-about {
+      flex-direction: column; /* Stack items vertically */
+    }
   
-      }
-      .navmenu a{
-          display: block;
-          margin: 18px 0;
-      }
-      .navmenu.open{
-          right: 0;
-      }
+    .gioithieu {
+      flex: 1; /* Take full width */
+      padding-right: 0; /* Remove right padding */
+      margin-bottom: 20px; /* Add some bottom margin */
+    }
+  
+    .sanphams img {
+      flex: 1; /* Take full width */
+      margin-right: 0; /* Remove right margin */
+    }
+  }
+  @media(max-width:900px){
+    header .fa-bars {
+      display: block;
+    }
+    .bx-iconss {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 50px;
+      height: 55px;
+      z-index: 7;
+    }
+    .box-menu.navbar_open {
+      left: 0;
+      transform: translateX(0);
+      opacity: 1;
+    }
+    .bx-icons::before,
+    .bx-icons::after {
+      content: "";
+      width: 30px;
+      height: 6px;
+      background-color: pink;
+      border-radius: 20px;
+    }
+  
+    .bx-icons {
+      position: relative;
+      width: 30px;
+      height: 6px;
+      background-color: pink;
+      border-radius: 20px;
+    }
+    .bx-icons::before {
+      position: absolute;
+      transform: translateY(-10px);
+    }
+    .bx-icons::after {
+      position: absolute;
+      transform: translateY(10px);
+    }
+    .open .bx-icons {  
+      background-color: transparent;
+    }
+    .open .bx-icons::before {
+      transform: rotate(45deg);
+    }
+    .open .bx-icons::after {
+      transform: rotate(-45deg);
+    }
+    .inputs input {
+      width: 100px;
+      margin-right: 50px;
+    }
+    .box-menu {
+      position: absolute;
+      top: 100%;
+      width: 300px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 30px;
+      cursor: pointer;
+      transform: translateX(-300%);
+    }
+    .box-menu a {
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      background: #fff;
+    }
+    .trangchus {
+      padding-top: 50px;
+      min-height: auto;
+    }
+  
+    .trangchus .trangchu h3 {
+      font-size: 30px;
+    }
+  
+    .trangchus .trangchu span {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem;
+    }
       /*trang chu*/
       section {
         padding: 5% 10%; /* Giảm khoảng cách lề cho thiết bị có độ rộng màn hình nhỏ hơn 768px */
@@ -660,6 +805,20 @@ section{
 
 .giohang a {
   padding: 8px 16px;
+  }
+  .box-about {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .gioithieu {
+    flex: 1; /* Take full width */
+    padding-right: 0; /* Remove right padding */
+    margin-bottom: 20px; /* Add some bottom margin */
+  }
+
+  .sanphams img {
+    flex: 1; /* Take full width */
+    margin-right: 0; /* Remove right margin */
   }
 }
 /*giới thiệu*/

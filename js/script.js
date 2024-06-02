@@ -1,15 +1,13 @@
 //sidebar
-const header = document.querySelector("header");
-        window.addEventListener("scroll",function(){
-            header.classList.toggle("sticky", this.window.scrollY >0);
-        })
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".bx-iconss");
+  const menu = document.querySelector(".box-menu");
 
-        let menu = document.querySelector('#menu-icon');
-        let navmenu = document.querySelector('.navmenu');
-        menu.onclick = () =>{
-            menu.classList.toggle('bx-x');
-            navmenu.classList.toggle('open');
-        }
+  menuIcon.addEventListener("click", function () {
+    menu.classList.toggle("navbar_open");
+    menuIcon.classList.toggle("open")
+  });
+});
 /* CHẠY HÌNH */
 // Lấy ra các phần tử cần thiết
 const slides = document.querySelector(".slides");
