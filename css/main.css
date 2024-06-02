@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 1s linear;
+    list-style: none;
+  }
+  a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  html {
+    font-size: 60%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  body {
+    align-items: center;
+  }
+  header {
+    position: fixed; /* cuon trang nhung van dung yen*/
+    display: flex; /* cho tat ca nam hang ngang*/
+    z-index: 3;
+    font-size: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f7f5f5;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000px;
+    box-shadow: 0 0.5rem 1rem rgb(66, 47, 47);
+    border-radius: 4px;
+  }
+  .logo {
+    font-size: 20px;
+    color: #333;
+    font-weight: bolder;
+    color: rgb(243, 75, 131);
+  }
+  
+  .navmenu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.navmenu a {
+    
+    color: #2c2c2c;
+    font-size: 10px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover {
+    color:palevioletred;
+}
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: rgb(234, 98, 204);
+}
+/*trangchu*/
+section{
+    padding: 5% 10%;
+}
+
+.trangchus {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    background-size: cover;
+  }
+  .trangchus .trangchu h3 {
+    font-size: 40px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(97, 20, 97);
+  }
+  .trangchus .trangchu span {
+    font-size: 30px;
+    color: rgb(126, 123, 124);
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-style: oblique;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background: #302e2e;
+    color: rgb(234, 227, 229);
+    font-size: 2rem;
+    padding: 1rem 3%; /* chinh noi dung trong*/
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: rgb(218, 112, 130);
+  }
+  .carousel {
+    overflow: hidden; /* Để ẩn phần nằm ngoài khu vực carousel */
+  }
+  .slides {
+    display: flex;
+    transition: 0.5s ease; /* Hiệu ứng chuyển động */
+  }
+  .slides img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .bx {
+    display: none;
+  }
+  /*thanh chu*/
+  .heading {
+    font-size: 4rem;
+    color: #cd326b;
+    background: #cdc5c5;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 3rem; /* chinh noi dung ngoai*/
+    margin-top: 3rem;
+  }
+  .heading span {
+    font-size: 2rem;
+    color: #241717;
+  }
+  /*chon*/
+  .icon_conta {
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .icon_contas {
+    background: #fff;
+    padding: 2rem;
+    align-items: center;
+  }
+  .icon_contas h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .icon_contas p {
+    font-style: oblique;
+    color: #bf3232;
+  }
+  /*sanpham*/
+  .box-hoahong{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+    gap:2rem
+  }
+  .box-hoahong .row{
+    position: relative;
+    transition: all 40s;
+  }
+  .box-hoahong .row img{
+    width:80%;
+    height: 20rem;
+    transition: all 40s;
+  }
+   .row img:hover{
+    transform: scale(0.9);
+  }
+  .box-hoahong .box_contaier {
+    font-size: 2rem;
+    background: #333;
+    color: rgb(207, 38, 94);
+    z-index: 1;
+    border-radius: 5rem;
+  }
+  .box-hoahong .heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
+  .box-hoahong .heart-icon:hover{
+    color: #bf3232;
+  }
+  .ratting i{
+    color: yellow;
+    font-size: 18px;
+  }
+  .gia {
+    font-size: 2rem;
+    color: #cd326b;
+    font-weight: bolder;
+    padding-top: 1rem;
+  }
+  .gia span {
+    font-size: 1.5rem;
+    color: #888585;
+    font-weight: lighter;
+    text-decoration: line-through;
+  }
+  /**/
+  
+
+/*danhgia*/
+.review .box_review {
+  display: flex;
+  text-align: center;
+}
+.review .box_review .box {
+  padding-top: 2rem;
+  text-align: left;
+}
+.stars {
+  color: rgb(213, 213, 17);
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+.nguoi img {
+  border-radius: 50%;
+}
+
+/* lien he*/
+
+.box-contact {
+  padding: 20px;
+  background-image: url("/img/8307.jpg_wh860.jpg");
+  background-size: 50%;
+}
+.box-contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.congty {
+  color: blue;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  font-size: 15px;
+  flex: 1;
+}
+.khachhang {
+  flex: 1;
+  text-align: center;
+}
+
+.khachhang h2 {
+  margin-top: 0;
+  color: blue;
+}
+
+.khachhang .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.khachhang .form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  backdrop-filter: blur(15px);
+}
+
+.khachhang .btn {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  color: blue;
+}
+.khachhang .btn:hover {
+  background-color: #1ce934;
+}
+.input-field {
+  position: relative;
+}
+.input-field input[type="email"],
+.input-field input[type="text"],
+.input-field input[type="number"] {
+  border-radius: 10px;
+  background: transparent;
+  margin: 15px;
+  border: 2px solid rgb(61, 199, 43);
+  width: 280px;
+  height: 2px;
+  padding: 20px 40px 20px 20px;
+  backdrop-filter: blur(15px);
+}
+/**/
+.contact {
+    background-color: #f3f4f5;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+    gap: 3rem;
+}
+.first-info img {
+    width: 140px;
+    height: auto;
+}
+.contact-info h4 {
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p {
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info p:hover {
+    color: #EE1C47;
+}
+.contact-icon {
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+.social-icon i:hover {
+    transform: scale(1.3);
+}
+.end-text {
+    background-color: #edfff1;
+    text-align: center;
+    padding: 20px;
+}
+.end-text p {
+    color: #111;
+    text-transform: capitalize;
+    
+}
+/* trang sp*/
+/*san pham*/
+.sanpham {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sanphams {
+  margin-top: 15rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.sanpham h3 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  color: red;
+}
+
+.sanphams img {
+  width: 250px; /* Điều chỉnh kích thước của ảnh */
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sanpham-box {
+  flex: 1;
+}
+
+.gia {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ed0b13;
+  margin-bottom: 10px;
+}
+
+.gia span {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.box_contaiers ul {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.box_contaiers li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #555;
+}
+.box_contaiers span {
+  font-style: oblique;
+}
+.luu-y {
+  border: 1px solid #5f08eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  position: relative;
+  margin-top: 20px;
+  color: #288ad6;
+  font-size: 14px;
+}
+
+.luu-y p {
+  padding: 5px;
+  font-size: 14px;
+  color: #3f0df3;
+}
+
+.giohang {
+  margin: 20px;
+  display: flex;
+}
+.gio {
+  margin: 5px;
+  display: flex;
+}
+.mua {
+  margin: 5px;
+  display: flex;
+}
+
+.giohang a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.giohang a:hover {
+  background-color: #de6007;
+}
+    
+  
+
+    /*media*/
+    @media(max-width:450px){
+      .main-text h1{
+          font-size: 50px;
+          transition:  .4s;
+      }
+      .main-text p{
+          font-size: 18px;
+          transition:  .4s;
+      }
+      .main-btn{
+          padding: 10px 20px;
+          transition:  .4s;
+      }
+      .review .box_review {
+        display: block; 
+    }
+    
+    .review .box_review .box {
+        padding-top: 1rem; 
+        text-align: center; 
+    }
+    
+    .stars {
+        font-size: 1.5rem; 
+        padding-bottom: 1rem; 
+        text-align: center; 
+    }
+    
+    .nguoi img {
+        border-radius: 50%;
+        display: block; 
+        margin: 0 auto; 
+    }
+    /*lienhe*/
+    .box-contact {
+        background-size: 100%; }
+    
+    .input-field input[type="email"],
+    .input-field input[type="text"],
+    .input-field input[type="number"] {
+        width: 100%;
+        max-width: none; 
+        margin: 10px 0; 
+        padding: 15px; 
+    }
+    .heading{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .height  span{
+      font-size: 1rem;
+    }
+  }
+  @media(max-width:750px){
+      .navmenu{
+          position: absolute;
+          top: 100%;
+          right: -100%;
+          width: 300px;
+          height: 130vh;
+          background: #edfff1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 120px 30px;
+          transition: all .42s;
+  
+      }
+      .navmenu a{
+          display: block;
+          margin: 18px 0;
+      }
+      .navmenu.open{
+          right: 0;
+      }
+      /*trang chu*/
+      section {
+        padding: 5% 10%; /* Giảm khoảng cách lề cho thiết bị có độ rộng màn hình nhỏ hơn 768px */
+      }
+    
+      .trangchus {
+        padding-top: 100px; /* Giảm khoảng cách phía trên cho phù hợp với thiết bị di động */
+      }
+    
+      .trangchus .trangchu h3 {
+        font-size: 30px; /* Giảm kích thước font chữ cho phù hợp với thiết bị di động */
+      }
+    
+      .trangchus .trangchu span {
+        font-size: 20px; /* Giảm kích thước font chữ cho phù hợp với thiết bị di động */
+        padding: 0.5rem 0; /* Giảm khoảng cách giữa dòng cho phù hợp với thiết bị di động */
+      }
+    
+      .btn {
+        font-size: 0.5rem; /* Giảm kích thước font chữ cho phù hợp với thiết bị di động */
+        padding: 0.8rem 2%; /* Giảm khoảng cách lề cho phù hợp với thiết bị di động */
+      }
+    
+      .carousel {
+        overflow: hidden;
+      }
+    
+      .bx {
+        display: block; /* Hiển thị các phần tử .bx cho thiết bị di động */
+      }
+    
+      /*lien he*/
+      .box-contact {
+        background-size: 100%; }
+    
+    .input-field input[type="email"],
+    .input-field input[type="text"],
+    .input-field input[type="number"] {
+        width: 100%;
+        max-width: none; 
+        margin: 10px 0; 
+        padding: 15px; 
+    }
+    /**/
+.review .box_review {
+  display: block; 
+}
+
+.review .box_review .box {
+  padding-top: 1rem; 
+  text-align: center; 
+}
+
+.stars {
+  font-size: 1.5rem; 
+  padding-bottom: 1rem; 
+  text-align: center; 
+}
+
+.nguoi img {
+  border-radius: 50%; 
+  display: block; 
+  margin: 0 auto; 
+}
+.box-hoahong {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Thay đổi kích thước cột cho thiết bị có độ rộng màn hình nhỏ hơn 768px */
+}
+
+.box-hoahong .box_contaier {
+  font-size: 1.2rem; /* Điều chỉnh kích thước font chữ cho phù hợp với thiết bị có độ rộng màn hình nhỏ hơn 768px */
+  border-radius: 1rem; /* Giảm bán kính bo tròn cho phù hợp với thiết bị có độ rộng màn hình nhỏ hơn 768px */
+}
+
+.box-hoahong .heart-icon {
+  font-size: 1rem; /* Điều chỉnh kích thước font chữ cho phù hợp với thiết bị có độ rộng màn hình nhỏ hơn 768px */
+  right: 0.3rem; /* Điều chỉnh khoảng cách từ biểu tượng "heart" đến cạnh phải của container */
+  top: 0.3rem; /* Điều chỉnh khoảng cách từ biểu tượng "heart" đến cạnh trên của container */
+}
+
+.gia {
+  font-size: 1.2rem; /* Điều chỉnh kích thước font chữ cho phù hợp với thiết bị có độ rộng màn hình nhỏ hơn 768px */
+  padding-top: 0.3rem; /* Giảm khoảng cách từ phần giá đến các phần khác */
+}
+
+      /*sanpham*/
+.sanphams {
+  margin-top: 10rem; 
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.sanphams img {
+  
+  height: 100%;
+  margin-right: 0; 
+  margin-bottom: 1rem; 
+  border-radius: 8px; 
+}
+
+.sanpham h3 {
+  font-size: 1.5rem;
+}
+
+.gia {
+  font-size: 14px; 
+}
+
+.giohang {
+  margin: 10px 0; 
+  justify-content: center; 
+}
+
+.giohang a {
+  padding: 8px 16px;
+  }
+}
+/*giới thiệu*/
+.about {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.box-about {
+  display: flex;
+  width: 100%;
+}
+
+.gioithieu {
+  flex: 0 0 66.666667%; /* 2/3 */
+  padding-right: 20px;
+  
+}
+.gioithieu h3{
+  color: red;
+}
+
+.sanphams img {
+  
+ font-size: 1rem;
+  flex: 0 0 33.333333%; /* 1/3 */
+
+}
